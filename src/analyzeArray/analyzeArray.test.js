@@ -13,5 +13,6 @@ it("analyze max", () => {
 });
 
 it("analyze length", () => {
-  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveLength(6);
+  // eslint-disable-next-line jest/prefer-to-have-length
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).length).toBe(6);
 });
