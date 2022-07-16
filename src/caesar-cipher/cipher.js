@@ -1,7 +1,10 @@
 const caesarCipher = {
   encript: (string, shiftNumber) => {
     if (typeof string !== "string" || typeof shiftNumber !== "number") {
-      throw new Error("You must provide valid data");
+      throw new Error("You must provide string and a shift number");
+    }
+    if (shiftNumber < 0 || shiftNumber > 26) {
+      throw new Error("Shift number must be between 0 and 26");
     }
     const stringArray = string.split("");
     const shiftedArray = [];
